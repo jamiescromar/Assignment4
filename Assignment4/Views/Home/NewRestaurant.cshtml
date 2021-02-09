@@ -1,0 +1,32 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "New Restaurant";
+}
+@model Assignment4.Models.NewRestaurant;
+
+
+<!--Create a form that will pull new restaurant information-->
+<form method="post" asp-action="NewRestaurant">
+    <div asp-validation-summary="All"></div>
+
+    <div class="form-group">
+        <!--Create Input for Name-->
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" id="Name" /><br /><br />
+
+        <!--Create Input for Restauraunt Name-->
+        <label asp-for="RestaurantName">Restaurant Name</label>
+        <input asp-for="RestaurantName" id="RestaurantName" /><br /><br />
+
+        <!--Create Input for Favorite Dish-->
+        <label asp-for="FavoriteDish">Favorite Dish</label>
+        <input asp-for="FavoriteDish" id="FavoriteDish" /><br /><br />
+
+        <!--Create Input for Phone Number-->
+        <label asp-for="PhoneNumber">Phone Number</label>
+        <input asp-for="PhoneNumber" id="PhoneNumber" /><br /><br />
+    </div>
+    <button class="btn btn-default" type="submit">Submit Restaurant</button>
+</form>

@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Top 5 Resturaunts in Provo";
+}
+@model IEnumerable<string>
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <!--This will display all of the image for the top five restauraunts at the top of the page-->
+    <div class="row" style="text-align:center; margin-left:10px; margin-right:10px">
+        <div class="col-sm">
+            <img style="width:200px;height:200px;object-fit:cover;" src="~/img/slabpizza.png" />
+        </div>
+        <div class="col-sm">
+            <img style="width:200px;height:200px;object-fit:cover;" src="~/img/chick-fil-a.png" />
+        </div>
+        <div class="col-sm">
+            <img style="width:200px;height:200px;object-fit:cover;" src="~/img/jambajuice.png" />
+        </div>
+        <div class="col-sm">
+            <img style="width:200px;height:200px;object-fit:cover;" src="~/img/crumbl.png" />
+        </div>
+        <div class="col-sm">
+            <img style="width:200px;height:200px;object-fit:cover;" src="~/img/noodles.jpg" />
+        </div>
+    </div>
+    <!--This is going to output all the data that is being passed from the controller which comes from the model-->
+    @foreach (string r in Model)
+    {
+<div class="card-body">
+    <!--Ths will pull in concatinated string in the controller-->
+    <p>@r</p>
+</div>
+    }
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "List of My Restaurants";
+}
+<!--Call the model and make in IEnumerable-->
+@model IEnumerable<Assignment4.Models.NewRestaurant>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <!--This is creating the headers of the table-->
+            <th style="padding-left:8px; padding-right:8px;">Name</th>
+            <th style="padding-left:8px; padding-right:8px;">Restaurant Name</th>
+            <th style="padding-left:8px; padding-right:8px;">Favorite Dish</th>
+            <th style="padding-left:8px; padding-right:8px;">Phone Number</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Assignment4.Models.NewRestaurant x in Model)
+        {
+            <tr>
+                <!--This is assigning the model variables to the list so that it can be seen in this view-->
+                <td style="padding-left:8px; padding-right:8px;">@x.Name</td>
+                <td style="padding-left:8px; padding-right:8px;">@x.RestaurantName</td>
+                <td style="padding-left:8px; padding-right:8px;">@x.FavoriteDish</td>
+                <td style="padding-left:8px; padding-right:8px;">@x.PhoneNumber</td>
+            </tr>
+
+        }
+    </tbody>
+</table>

@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<!--Jamie Cromar-->
+<!--Section 2-->
+<head>
+    <!--This will be able to make sure that every view has the same header and can call all of these bootstrap templates and files-->
+    <title>Top 5 Restaurants</title>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap-grid.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap-reboot.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!--This puts eveything into a container-->
+    <div class="container">
+        <h1 class="jumbotron">@ViewBag.Title</h1>
+        <div class="container">
+            <ul class="nav nav-pills" role="tablist">
+                <!--This is the nav bar area where you will be able to navigate between the different views-->
+                <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="NewRestaurant">New Restaurant</a></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="RestaurantList">Your Restaurant List</a></li>
+            </ul>
+        </div><br /><br />
+        <!--This will call the information from the other views-->
+        @RenderBody()
+        <br /><br /><br>
+        <footer>Jamie Cromar, Inc. IS 413 2021</footer>
+    </div>
+</body>
+</html>
