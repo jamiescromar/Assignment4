@@ -13,7 +13,7 @@ namespace Assignment4.Models
         {
             Rank = rank;
         }
-        //This will amke sure that the rank is required
+        //This will make sure that the rank is required and make it so that the rank can not be set outside of the model
         [Required(ErrorMessage = "Rank Required")]
         public int Rank { get; }
         //validate that REstauraunt name is not null
@@ -24,7 +24,7 @@ namespace Assignment4.Models
         [Required(ErrorMessage = "Address Required")]
         public string Address { get; set; }
         [Phone]
-        public string PhoneNumber { get; set; }
+        public string? PhoneNumber { get; set; } = "";
         //This will make it so that if the link value is null it will autmatically set the value to coming soon
         public string? Link { get; set; } = "Coming Soon";
 
@@ -44,7 +44,7 @@ namespace Assignment4.Models
             {
                 RestaurantName = "Chick-fil-A",
                 Address = "484 Bulldog Ln, Provo, UT 84604",
-                PhoneNumber = "8013742697",
+                //PhoneNumber = "8013742697",
                 Link = "https://www.chick-fil-a.com/"
             };
             Restaurant R3 = new Restaurant(3)
